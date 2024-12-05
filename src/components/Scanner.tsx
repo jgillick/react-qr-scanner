@@ -133,6 +133,7 @@ export function Scanner(props: IScannerProps) {
     const [constraintsCached, setConstraintsCached] = useState(mergedConstraints);
 
     const camera = useCamera();
+    const FinderComponent = typeof mergedComponents.finder === 'function' ? mergedComponents.finder : Finder;
 
     const { startScanning, stopScanning } = useScanner({
         videoElementRef: videoRef,
@@ -285,7 +286,7 @@ export function Scanner(props: IScannerProps) {
                 }}
             >
                 {mergedComponents.finder && (
-                    <Finder
+                    <FinderComponent
                         scanning={isCameraActive}
                         capabilities={camera.capabilities}
                         loading={false}

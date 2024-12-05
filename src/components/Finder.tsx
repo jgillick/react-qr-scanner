@@ -4,7 +4,7 @@ import OnOff from './OnOff';
 import Torch from './Torch';
 import Zoom from './Zoom';
 
-interface IFinderProps {
+export interface IFinderProps {
     scanning: boolean;
     loading: boolean;
     capabilities: MediaTrackCapabilities;

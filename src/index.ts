@@ -1,6 +1,9 @@
 export * from './components/Scanner';
+export { IFinderProps } from './components/Finder';
 export * from './hooks/useDevices';
-export * from './misc/overlays';
+export * from './hooks/useCamera';
+export * from './hooks/useScanner';
+export * from './misc';
 export * from './types';
 
-export { setZXingModuleOverrides } from 'barcode-detector';
+export { setZXingModuleOverrides, BarcodeFormat } from 'barcode-detector';
